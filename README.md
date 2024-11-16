@@ -1,33 +1,33 @@
 # ♟️ MortPion
-Un projet de jeu basé sur des concepts de jeux classiques et modernes, développé en Java.
+A game project based on classic and modern game concepts, developed in Java.
 
-## 🕹️ Fonctionnalités
-- **Choix de jeu** : Tic Tac Toe, Mort Pion, et plus.
-- **Personnalisation des paramètres** : Modifiez les règles du jeu pour chaque partie.
-- **Interface utilisateur intuitive** : Conçue pour une expérience fluide.
+## 🕹️ Features
+- **Game Selection**: Tic Tac Toe, Mort Pion, and more.
+- **Customizable Settings**: Adjust the rules for each game session.
+- **User-Friendly Interface**: Designed for a smooth and intuitive experience.
 
-## 🚀 Installation et exécution
-1. Clonez ce dépôt :
+## 🚀 Installation and Execution
+1. Clone this repository:
    ```bash
    git clone https://github.com/KuKaRaCHa-gg/MortPion.git
-Accédez au dossier :
+Navigate to the folder:
 cd MortPion
-Compilez et exécutez le projet (Java 17 recommandé) :
+Compile and run the project (Java 17 recommended):
 javac MainJar.java
 java MainJar
-🛠️ Prérequis
-Java JDK 17 ou supérieur
-Compatible avec les IDE comme IntelliJ IDEA ou Eclipse.
-✍️ Auteur
-Daniil Minevich - Étudiant en BUT informatique.
+🛠️ Requirements
+Java JDK 17 or higher
+Compatible with IDEs such as IntelliJ IDEA or Eclipse.
+✍️ Author
+Daniil Minevich - Computer Science Student (BUT Informatique).
 
 
 ---
 
-### **Étape 5 : Ajouter et pousser le README.md**
-1. Crée le fichier `README.md` dans le dossier.
-2. Ajoute-le avec Git :
+### **Next Steps**
+1. Save this content in a `README.md` file inside your project folder.
+2. Use Git to add and push it to your repository:
    ```bash
    git add README.md
-   git commit -m "Ajout du fichier README.md"
+   git commit -m "Added English README.md"
    git push
