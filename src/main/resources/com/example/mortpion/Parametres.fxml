@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="503.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mortpion.ParametresContoller" style="-fx-background-color: #000000;">
+    <padding>
+        <Insets top="30" right="20" bottom="20" left="20"/>
+    </padding>
+    <Text text="MORT PION" style="-fx-font-size: 36; -fx-fill: white; -fx-font-weight: bold;" />
+    <Text text="PARAMETRES" style="-fx-font-size: 18; -fx-fill: white; -fx-font-weight: bold;" />
+
+    <Label text="GRAPHISME" style="-fx-font-size: 16; -fx-text-fill: white;" />
+    <Slider fx:id="graphicsSlider" min="0" max="4" value="2" showTickLabels="true" showTickMarks="true" majorTickUnit="1" snapToTicks="true" prefWidth="400" />
+
+    <HBox spacing="10">
+        <Text text="FAIBLE" style="-fx-font-size: 12; -fx-fill: white;" />
+        <Text text="NORMAL" style="-fx-font-size: 12; -fx-fill: white;" />
+        <Text text="BON" style="-fx-font-size: 12; -fx-fill: white;" />
+        <Text text="INCROYABLE" style="-fx-font-size: 12; -fx-fill: white;" />
+        <Text text="STOP TU VAS CRAMMER TON PC" style="-fx-font-size: 12; -fx-fill: white;" />
+    </HBox>
+
+    <VBox spacing="5">
+        <CheckBox fx:id="rtxCheckBox" text="RTX" style="-fx-font-size: 14; -fx-text-fill: white;" />
+        <CheckBox fx:id="dlssCheckBox" text="DLSS" style="-fx-font-size: 14; -fx-text-fill: white;" />
+        <CheckBox fx:id="rgbCheckBox" text="RGB" style="-fx-font-size: 14; -fx-text-fill: white;" />
+    </VBox>
+
+    <Label text="SON?" style="-fx-font-size: 16; -fx-text-fill: white;" />
+    <Slider fx:id="volumeSlider" min="0" max="100" value="50" showTickLabels="true" showTickMarks="true" majorTickUnit="25" snapToTicks="true" prefWidth="400" />
+
+    <Button text="APPLIQUER" onAction="#applySettings" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14;"/>
+    <Button text="RETOUR" onAction="#returnToMenu" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14;"/>
+</VBox>

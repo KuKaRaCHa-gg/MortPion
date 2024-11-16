@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mortpion.ClassiqueParametresController">
+    <children>
+        <!-- Image d'arrière-plan -->
+        <ImageView fitHeight="700.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" styleClass="background-image">
+            <image>
+                <Image url="@/Menu_choix_jeu.png" />
+            </image>
+        </ImageView>
+
+        <!-- Barre de menu -->
+        <MenuBar AnchorPane.topAnchor="0">
+            <menus>
+                <Menu text="Jeu">
+                    <items>
+                        <MenuItem onAction="#gererAfficherRegles" text="Afficher les Règles" />
+                        <MenuItem onAction="#gererQuitter" text="Quitter" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+
+        <!-- Contenu principal -->
+        <VBox layoutX="10" layoutY="25" spacing="20" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="25">
+            <children>
+                <HBox alignment="CENTER" spacing="20">
+                    <children>
+                        <!-- Configuration pour le joueur 1 -->
+                        <VBox alignment="CENTER" spacing="10" styleClass="player-box">
+                            <children>
+                        <AnchorPane prefHeight="100.0" prefWidth="200.0" />
+                                <Label styleClass="player-label" text="Configuration Joueur 1" textFill="WHITE" />
+                                <TextField fx:id="nomJoueur1" promptText="Entrez le nom du Joueur 1" />
+                                <ComboBox fx:id="typeDeContenuJoueur1" onAction="#gererChangementTypeDeContenuJoueur1">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Texte" />
+                                            <String fx:value="Emoji" />
+                                            <String fx:value="Image" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <TextField fx:id="symboleJoueur1" promptText="Entrez un symbole, un emoji ou le chemin d'une image" />
+                                <Button fx:id="boutonSelectionnerImage1" onAction="#gererSelectionImageJoueur1" text="Sélectionner une Image" visible="false" />
+                                <ColorPicker fx:id="couleurJoueur1" />
+                            </children>
+                        </VBox>
+
+                        <!-- Configuration pour le joueur 2 -->
+                        <VBox alignment="CENTER" spacing="10" styleClass="player-box">
+                            <children>
+                        <AnchorPane prefHeight="100.0" prefWidth="200.0" />
+                                <Label styleClass="player-label" text="Configuration Joueur 2" textFill="WHITE" />
+                                <TextField fx:id="nomJoueur2" promptText="Entrez le nom du Joueur 2" />
+                                <ComboBox fx:id="typeDeContenuJoueur2" onAction="#gererChangementTypeDeContenuJoueur2">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Texte" />
+                                            <String fx:value="Emoji" />
+                                            <String fx:value="Image" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <TextField fx:id="symboleJoueur2" promptText="Entrez un symbole, un emoji ou le chemin d'une image" />
+                                <Button fx:id="boutonSelectionnerImage2" onAction="#gererSelectionImageJoueur2" text="Sélectionner une Image" visible="false" />
+                                <ColorPicker fx:id="couleurJoueur2" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <!-- Choix du premier joueur -->
+                <HBox alignment="CENTER" spacing="10">
+                    <children>
+                        <Label styleClass="custom-label" text="Qui commence ?" textFill="WHITE" />
+                        <ComboBox fx:id="joueurCommencant" />
+                    </children>
+                </HBox>
+
+                <!-- Mode de jeu -->
+                <HBox alignment="CENTER" spacing="10">
+                    <children>
+                        <Label styleClass="custom-label" text="Mode de Jeu :" textFill="WHITE" />
+                        <ComboBox fx:id="modeDeJeu" />
+                    </children>
+                </HBox>
+
+                <!-- Boutons de contrôle -->
+                <HBox alignment="CENTER" spacing="15">
+                    <children>
+                        <Button onAction="#demarrerJeu" prefHeight="169.0" prefWidth="378.0" style="-fx-background-color: #ac1a27; -fx-text-fill: white;" styleClass="start-button" text="Démarrer le Jeu">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="36.0" />
+                     </font></Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

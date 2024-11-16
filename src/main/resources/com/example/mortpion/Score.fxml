@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mortpion.ScoreController" style="-fx-background-color: black;">
+    <children>
+        <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20">
+            <children>
+                <Label text="Tableau des Scores" style="-fx-font-size: 36; -fx-text-fill: white; -fx-font-weight: bold;" />
+                <TableView fx:id="scoreTable" prefWidth="700" prefHeight="503">
+                    <columns>
+                        <TableColumn fx:id="playerColumn" text="Joueur" prefWidth="200" />
+                        <TableColumn fx:id="scoreColumn" text="Score" prefWidth="200" />
+                    </columns>
+                </TableView>
+                <Button text="Retour" onAction="#handleBackButton"
+                        style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 16;"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

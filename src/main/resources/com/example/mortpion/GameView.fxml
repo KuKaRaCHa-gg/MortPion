@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane prefHeight="700.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mortpion.GameController">
+    <children>
+        <!-- Image d'arrière-plan -->
+        <ImageView fitHeight="700.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/Menu_choix_jeu.png" />
+            </image>
+        </ImageView>
+
+        <!-- Grille de jeu -->
+        <GridPane fx:id="grilleDeJeu" alignment="CENTER" hgap="10" layoutX="50.0" layoutY="150.0" vgap="10" />
+
+        <!-- Indicateur de tour et score -->
+        <Label fx:id="indicateurTour" layoutX="50.0" layoutY="110.0" style="-fx-font-size: 16; -fx-text-fill: white;" text="Tour : Joueur 1" />
+        <Rectangle fx:id="lumiereIndicateurTour" fill="red" height="20.0" layoutX="300.0" layoutY="110.0" width="20.0" />
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="600.0" prefHeight="58.0" prefWidth="511.0" spacing="15">
+            <children>
+                <Button onAction="#gererRejouer" text="Rejouer" />
+                <Label fx:id="scoreLabelJoueur1" style="-fx-text-fill: red; -fx-font-size: 16;" text="Joueur 1 : 0" />
+                <Label fx:id="scoreLabelJoueur2" style="-fx-text-fill: blue; -fx-font-size: 16;" text="Joueur 2 : 0" />
+                <Button onAction="#retournerAuxParametres" text="Retour aux Paramètres" />
+                <Button onAction="#gererQuitter" text="Quitter le Jeu" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
